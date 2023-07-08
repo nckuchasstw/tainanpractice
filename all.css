@@ -1,5 +1,5 @@
-/*banner手機RWD*/       
-@media screen and (max-width: 600px){
+    /*banner手機RWD*/       
+    @media screen and (max-width: 600px){
     #banner .banner-content ul li:nth-of-type(even),
     #banner .banner-content ul li:nth-of-type(1),
     #banner .banner-content ul li:nth-of-type(7){
@@ -49,61 +49,50 @@
     }
     }
 
-
-
-
-body{
+    body{
     font-family: 'Noto Serif TC', serif;
-   
-}
 
-.nav-item:hover{
-    
-    border-radius: 10px;
+    }
+
+    .nav-item:hover{
     border: 0.5px #B69664 solid;
+    }
 
-}
-
-.nav-link:hover{
+    .nav-link:hover{
     color: #B69664;
-}
+    }
 
 
-.navbar-nav{
+    .navbar-nav{
     align-items: center;
-}
+    }
 
-.nav-link{
+    .nav-link{
     color: white;
-}
+    }
 
-h3{
+    h3{
     color:rgb(8, 8, 8);
-}
+    }
 
-.accordion-body{
+    .accordion-body{
     line-height: 30px;
     letter-spacing: 2px;
-    
-}
 
-.swiper-slide img{
+    }
+
+    .swiper-slide img{
     border-radius: 5px;
-  
-}
 
-
-
-
-
+    }
 
     .navbar-active{
 
-        animation-fill-mode:both;
-        animation-name: fadeInDown;
-        animation-duration: 1.5s;
-        
-    
+    animation-fill-mode:both;
+    animation-name: fadeInDown;
+    animation-duration: 1.5s;
+
+
     }
     @keyframes fadeInDown{
     0% {
@@ -121,13 +110,19 @@ h3{
     
     }
 
-    #banner,#introduce,#activity,#topic,#video{
-        padding: 150px 0;
+        #banner,#introduce,#activity,#topic,#video,#url{
+            padding-top: 180px;
+            padding-bottom: 160px;
 
-    }
+
+        }
+
+        #url{
+            background-color:#ffffff; 
+        }
 
         #banner{
-        background-image: url(banner-01.svg);
+        background-image: url);
         background-color:#163D50; 
         background-repeat: no-repeat;
         background-position:center top;
@@ -137,10 +132,6 @@ h3{
         background-size: cover;
 
         }
-
-
-
-
          /*banner樣式定位*/  
          #banner .banner-content ul{
             height: 900px;
@@ -172,7 +163,6 @@ h3{
                 background-repeat: no-repeat;
                 background-size: unset;
                 background-position:  top center;
-                padding: 90px 0;
                 }
 
             #activity,#video{ 
@@ -184,7 +174,6 @@ h3{
                 background-repeat: no-repeat;
                 background-size: unset;
                 background-position:  top center;
-               
                 }
 
                 .footer{
@@ -198,9 +187,8 @@ h3{
             border-radius: 30px;
             padding: 4px 20px;
             color: #fff;
-            background-color: #056C9F;
-            box-shadow: 0px 6px 0px #1D3E76;
-            color: white;
+            background-color: #B69664;
+            box-shadow: 0px 6px 0px #8b7145;
             font-size: 18px;
             font-weight:bold;
             }
@@ -262,22 +250,6 @@ h3{
             100% {top: 100px;left: 1010px;}
             }
     
-            /*banner海豚動畫 
-            .bannerpicturedolphin{
-            position: relative;
-            animation: dolphinmove 20s infinite;
-            animation-timing-function: ease-out;
-            }
-    
-           
-            @keyframes dolphinmove {
-            0%   {scale:0;top: 500px;left: 1000px;} 
-            13%  {scale:1.5;top: 430px;left: 1000px;}
-            20% {scale:0;transform: rotate(90deg);top: 490px;left: 1020px;}
-            100% {scale:0;transform: rotate(90deg);top: 490px;left: 1020px;}
-    
-            }*/ 
-    
             /*banner火箭動畫*/  
             .bannerpicturerocket{
             position: relative;
@@ -297,7 +269,40 @@ h3{
 
             .bi{
                 color: white;
-                font-size: 14px;
+                font-size: 20px;
+            }
+
+            .swiper-slide img{
+                max-width: 100%;
+                box-shadow: 8px 6px 7px #141414;
+            }
+
+            .swiper-slide img:hover{
+               transform: scale(0.95);
+               transition: 1s ;
+            }
+
+            .swiper-wrapper{
+                margin-bottom: 10px;
+            }
+
+            .bi-youtube:hover{
+                color: red;
+            }
+
+            .bi-instagram:hover{
+                color:purple
+            }
+
+            .bi-spotify:hover{
+                color:purple
+            }
+
+            .bi-facebook:hover{
+                color:royalblue
             }
     
+            
+
+
             

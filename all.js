@@ -3,7 +3,7 @@ gsap.to(".navbar",{
 
     scrollTrigger:{
         markers:false,
-        start:"top -1%",
+        start:"top -4%",
         
         trigger:".carousel",
         toggleClass:{ targets:".navbar",className:"navbar-active" },
@@ -87,4 +87,16 @@ const app = Vue.createApp({
     },
   });
 
+  let tl = gsap.timeline({});
  
+
+    tl.fromTo(".nav-item",{stagger:{from: "random", 
+    amount: 1 } ,y:-70,opacity:0,duration:0.1},{stagger:{from: "random", 
+    amount: 1 },y:0,ease:"back.out(1.7)",opacity:1,duration:2});
+
+ 
+  AOS.init();
+
+
+  
+
