@@ -1,0 +1,301 @@
+/*banner手機RWD*/       
+@media screen and (max-width: 600px){
+    #banner .banner-content ul li:nth-of-type(even),
+    #banner .banner-content ul li:nth-of-type(1),
+    #banner .banner-content ul li:nth-of-type(7){
+    display: none;
+    }
+    }
+
+    /*計畫主題一二三RWD*/
+    @media only screen and (max-width: 500px){
+    .planall{
+    flex-direction: column;
+    }
+    }
+
+    /*計畫主題一二三RWD*/
+    @media only screen and (max-width: 1254px){
+    .teammemberstyle{
+    grid-template-columns: repeat(2, 1fr) !important;
+    }
+    }
+
+    /*圖片RWD*/
+    @media only screen and (max-width: 536px){
+    .teammemberstyle{
+    grid-template-columns: repeat(1, 1fr) !important;
+    }
+    }
+
+    /*圖片RWD*/
+    @media only screen and (max-width: 552px){
+    .picture{
+    display: none;
+    }
+    }
+
+    /*學術活動RWD*/
+    @media only screen and (max-width: 1254px){
+    .AcademicActivityStyle{
+    grid-template-columns: repeat(2, 1fr) !important;
+    }
+    }
+
+    /*學術活動一二三RWD*/
+    @media only screen and (max-width: 900px){
+    .AcademicActivityStyle{
+    grid-template-columns: repeat(1, 1fr) !important;
+    }
+    }
+
+
+
+
+body{
+    font-family: 'Noto Serif TC', serif;
+   
+}
+
+.nav-item:hover{
+    
+    border-radius: 10px;
+    border: 0.5px #B69664 solid;
+
+}
+
+.nav-link:hover{
+    color: #B69664;
+}
+
+
+.navbar-nav{
+    align-items: center;
+}
+
+.nav-link{
+    color: white;
+}
+
+h3{
+    color:rgb(8, 8, 8);
+}
+
+.accordion-body{
+    line-height: 30px;
+    letter-spacing: 2px;
+    
+}
+
+.swiper-slide img{
+    border-radius: 5px;
+  
+}
+
+
+
+
+
+
+    .navbar-active{
+
+        animation-fill-mode:both;
+        animation-name: fadeInDown;
+        animation-duration: 1.5s;
+        
+    
+    }
+    @keyframes fadeInDown{
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        -ms-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+    
+    }
+
+    #banner,#introduce,#activity,#topic,#video{
+        padding: 150px 0;
+
+    }
+
+        #banner{
+        background-image: url(/image/banner-01.svg);
+        background-repeat: no-repeat;
+        background-position:center top;
+        margin: 0;
+        padding:0;
+        border:0;
+        background-size: cover;
+        }
+
+
+
+
+         /*banner樣式定位*/  
+         #banner .banner-content ul{
+            height: 900px;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            }
+            
+            /*banner島鏈人文叢書定位*/  
+            #banner .banner-content ul>li:nth-of-type(1) {
+            width: 20%;
+            position: absolute;
+            top: 9%;
+            right: unset;
+            bottom: unset;
+            left: 0;
+            z-index: 0;
+            }
+
+           
+
+            #introduce,#topic{
+                background-color: white;
+                background-image: url();
+                color:#014D7F;
+                content: "";
+                width: auto;
+                background-repeat: no-repeat;
+                background-size: unset;
+                background-position:  top center;
+                padding: 90px 0;
+                }
+
+            #activity,#video{ 
+                background-color: #163D50;
+                background-image: url();
+                color:#014D7F;
+                content: "";
+                width: auto;
+                background-repeat: no-repeat;
+                background-size: unset;
+                background-position:  top center;
+               
+                }
+
+                .footer{
+                    background-color: #163D50;
+                }
+    
+            /*banner按鈕*/  
+        .btn1{
+            width: fit-content;
+            top: 0;
+            border-radius: 30px;
+            padding: 4px 20px;
+            color: #fff;
+            background-color: #056C9F;
+            box-shadow: 0px 6px 0px #1D3E76;
+            color: white;
+            font-size: 18px;
+            font-weight:bold;
+            }
+    
+            /*banner按鈕動畫*/  
+            .btn1:hover{
+            transform: scale(0.9);
+            transition: 0.8s;
+            }
+    
+            /*banner圖片放大*/  
+            .bannerpicture:hover{
+            transform: scale(1.1);
+            transition: 3s;
+            }
+    
+            /*banner船動畫*/ 
+            .bannerpictureship{
+            position: relative;
+            animation: shipmove 120s infinite;
+            }
+    
+            @keyframes shipmove {
+            0%   {top: -50px;left: 600px;}
+            45%  {left: 150px;}
+            50%  {top:350px; }
+            55%  {left: 100px; }
+            100% {left: -150px; }
+            }
+    
+            /*banner飛機動畫*/ 
+            .bannerpictureplane{
+            position: relative;
+            animation: planemove 20s infinite;
+           
+            }
+    
+            @keyframes planemove {
+            0%   {top: 700px;left: 300px;}
+            25%  {top: 690px;left: 400px;}
+            50%  {transform: rotate(40deg);top: 680px;left: 480px;}
+            75%  {transform: rotate(175deg);top: 670px;left: 550px;}
+            100% {transform: rotate(210deg);top: 700px;left: 300px;}
+            }
+    
+            /*banner車子動畫*/  
+            .bannerpicturecar{
+            position: relative;
+            animation: carmove 30s infinite;
+            
+           
+            }
+    
+            @keyframes carmove {
+            0%   {top: 100px;left: 800px;}
+            25%  {top: 100px;left: 900px;}
+            50%  {top: 100px;left: 950px;}
+            75%  {top: 100px;left: 1000px;}
+            100% {top: 100px;left: 1010px;}
+            }
+    
+            /*banner海豚動畫 
+            .bannerpicturedolphin{
+            position: relative;
+            animation: dolphinmove 20s infinite;
+            animation-timing-function: ease-out;
+            }
+    
+           
+            @keyframes dolphinmove {
+            0%   {scale:0;top: 500px;left: 1000px;} 
+            13%  {scale:1.5;top: 430px;left: 1000px;}
+            20% {scale:0;transform: rotate(90deg);top: 490px;left: 1020px;}
+            100% {scale:0;transform: rotate(90deg);top: 490px;left: 1020px;}
+    
+            }*/ 
+    
+            /*banner火箭動畫*/  
+            .bannerpicturerocket{
+            position: relative;
+            animation: rocketmove 15s infinite;
+            animation-timing-function: ease-in-out;
+            }
+    
+           
+            @keyframes rocketmove {
+            0%   {scale:0;top: 300px;left: 800px;} 
+            4% {scale:1;top: 300px;left: 800px;}
+            20% {scale:0.7;transform: rotate(40deg);top: -100px;left: 1000px;}
+            60% {scale:0.5;transform: rotate(120deg);top: -100px;left: 1000px;}
+            100% {scale:0.1;transform: rotate(180deg);top: -300px;left: 800px;}
+    
+            }
+
+            .bi{
+                color: white;
+                font-size: 14px;
+            }
+    
+            
