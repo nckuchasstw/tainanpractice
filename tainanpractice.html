@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/0fa3542fd4.js" crossorigin="anonymous"></script>
+    
+      <style>
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;t
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+        body{
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        /*banner圖片放大*/  
+        .bannerpicturem:hover{
+        transform: scale(1.2);
+        transition: 2s;
+        }
+
+        /*banner手機RWD*/       
+        @media screen and (max-width: 600px){
+        #banner .banner-content ul li:nth-of-type(even),
+        #banner .banner-content ul li:nth-of-type(1),
+        #banner .banner-content ul li:nth-of-type(7){
+        display: none;
+        }
+        }
+
+        /*計畫主題一二三RWD*/
+        @media only screen and (max-width: 500px){
+        .planall{
+        flex-direction: column;
+        }
+        }
+    
+        /*計畫主題一二三RWD*/
+        @media only screen and (max-width: 1254px){
+        .teammemberstyle{
+        grid-template-columns: repeat(2, 1fr) !important;
+        }
+        }
+    
+        /*圖片RWD*/
+        @media only screen and (max-width: 536px){
+        .teammemberstyle{
+        grid-template-columns: repeat(1, 1fr) !important;
+        }
+        }
+    
+        /*圖片RWD*/
+        @media only screen and (max-width: 552px){
+        .picture{
+        display: none;
+        }
+        }
+    
+        /*學術活動RWD*/
+        @media only screen and (max-width: 1254px){
+        .AcademicActivityStyle{
+        grid-template-columns: repeat(2, 1fr) !important;
+        }
+        }
+    
+        /*學術活動一二三RWD*/
+        @media only screen and (max-width: 900px){
+        .AcademicActivityStyle{
+        grid-template-columns: repeat(1, 1fr) !important;
+        }
+        }
+    
+        /*網頁Banner*/             
+        .banner{
+        padding-top: 60px;
+        }
+    
+        /*左側快速選單樣式*/ 
+        .sidemenu {
+        position: fixed;
+        right: 0;
+        top: 16%;
+        z-index:999;
+        background-color: #A9D4E4;
+        opacity:0.9;
+        color:#1D3E76 ;
+        z-index: 99px;
+        font-size: 14px;
+        border-radius: 10px;
+        }
+    
+        /*左側快速選單導航列*/ 
+        nav{
+        margin: auto;
+        }
+    
+        /*左側快速選單導航列*/          
+        .sidemenu nav {
+        width: calc(100% - 160px);
+        }
+    
+        /*左側快速選單導航列*/ 
+        .sidemenu nav>ul>li {
+        display: flex;
+        flex-wrap: unset;
+        flex-direction: unset;
+        justify-content: unset;
+        align-content: unset;
+        align-items: center;
+        }
+    
+        a{
+        text-decoration: none;
+        }
+        
+        a:hover{
+        text-decoration: none;
+        color: tomato;
+        }
+    
+        /*團隊成員樣式*/       
+        .allmember{
+        padding-left:15px;
+        }
+    
+        .member2{
+        text-align: center;
+        background-color: #A9D4E4;
+        color: #014D7F;
+        display: inline-block;
+        padding: 10px;
+        line-height: 30px;
+        width: 190px;
+        height: 150px;
+        vertical-align: top;
+        margin: 10px;
+        box-shadow: 4px 4px #9d9d9d;
+        }
+                       
+        .member2:hover{
+        opacity: 0.8;
+        }
+        .member{
+        text-align: center;
+        color: #014D7F;
+        display: inline-block;
+        padding: 10px;
+        line-height: 30px;
+        width: 250px;
+        height: 250px;
+        vertical-align: top;
+        margin: 10px;
+        line-height: 21px;
+        font-size: 16px;
+        }
+    
+        .ac{
+        text-align: center;
+        display: inline-block;
+        width: 400px;
+        border-radius: 10px;
+        box-shadow: 5px 5px #9d9d9d;
+        }
+    
+        .ac:hover{
+        transform: scale(1.1);
+        transition:2s ;        
+        }
+    
+        .member3{
+        text-align: center;
+        background-color: #A9D4E4;
+        color: #014D7F;
+        display: inline-block;
+        padding: 10px;
+        line-height: 30px;
+        width: 250px;
+        height: 200px;
+        vertical-align: top;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 4px 4px #9d9d9d;
+        }
+    
+        .member3:hover{
+        opacity: 0.8;
+        }
+    
+        .title{
+        font-size: 20px;
+        padding: 5px;
+        margin: 10px;
+        }
+
+        /*計畫簡介區塊樣式*/ 
+        #banner{
+        background-image: url(https://chass.ncku.edu.tw/var/file/11/1011/img/0606-01.svg );
+        background-repeat: no-repeat;
+        background-position:center top;
+        margin: 0;
+        padding:0;
+        border:0;
+        background-size: cover;
+        margin-top:-30px;
+        }
+
+        /*學術活動區塊樣式*/ 
+       
+        #introduce,#teammemberstyle ,#event{
+        padding-top: 90px ;
+        padding-bottom: 90px;
+        font-size:14px;
+        padding-left: 30px;
+        padding-right: 60px;
+        }
+    
+        #introduce ,#event{
+        background-color: white;
+        color:#014D7F;
+        }
+
+        /*團隊成員區塊樣式*/ 
+        #teammemberstyle{
+        background-color: #A9D4E4;
+        background-image: url(https://chass.ncku.edu.tw/var/file/11/1011/img/060604-01.jpg);
+        color:#014D7F;
+        content: "";
+        width: auto;
+        background-repeat: no-repeat;
+        background-size: unset;
+        background-position:  top center;
+        margin-bottom: 60px;
+        }
+    
+        /*計畫簡介&學術活動區塊樣式*/ 
+        #introduce,#event{
+        background-color: white;
+        background-image: url(https://chass.ncku.edu.tw/var/file/11/1011/img/060601-01.svg);
+        color:#014D7F;
+        content: "";
+        width: auto;
+        background-repeat: no-repeat;
+        background-size: unset;
+        background-position:  top center;
+        }
+          
+        .teammemberstyle{
+        display: grid;
+        grid-template-columns: repeat(4, 0fr);
+        justify-content: center;
+        align-items: center; 
+        gap: 60px !important;
+        list-style: none;
+        }
+    
+        .port:hover{
+        transform: scale(1.3);
+        transition: 2s;
+        }
+    
+        .port{
+        width: 200px;
+        }
+                    
+        .AcademicActivityStyle{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        align-items: center; 
+        gap: 30px !important;
+        list-style: none;
+        }
+    
+        .allwrap{
+        display: block;
+        text-align:center;
+        }
+    
+        ul{
+        padding: 0px;
+        }
+    
+        .case2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px !important;
+        list-style: none;
+        }
+    
+        .allwrap{
+        display: block;
+        }
+    
+        .case3{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px !important;
+        list-style: none;
+        }
+                
+        .img10:hover {
+        border: 1px solid rgb(92, 91, 91);
+        box-shadow:3px 3px  rgb(75, 75, 75);
+        transform: scale(0.95);
+        }
+    
+        .img10 {
+        transition: all 0.3s;
+        }
+
+        /*標題樣式*/ 
+        .headline{
+        font-size: 30px;
+        display: block;
+        padding-bottom: 20px;
+        color:#1D3E76;
+        text-align:center;
+        }
+
+        /*標題2樣式*/ 
+        .headline2{
+        font-size: 30px;
+        display: block;
+        padding:20px;
+        background-color: #2F3E45;
+        color:white;
+        }
+    
+        /*向右漂浮動畫*/ 
+        .active.fade-right {
+        animation: fade-right 1s ease-in;
+        }
+        @keyframes fade-right {
+        0% {
+        transform: translateX(100px);
+        opacity: 0;
+        }
+        100% {
+        transform: translateX(0);
+        opacity: 1;
+        }
+        }
+    
+        /*向左漂浮動畫*/ 
+        .active.fade-left {
+        animation: fade-left 1s ease-in;
+        }
+        @keyframes fade-left {
+        0% {
+        transform: translateX(-100px);
+        opacity: 0;
+        }
+        100% {
+        transform: translateX(0px);
+        opacity: 1;
+        }
+        }
+    
+        /*由下往上漂浮動畫*/ 
+        .active.fade-bottom {
+        animation: fade-bottom 1s ease-in;
+        }
+        @keyframes fade-bottom {
+        0% {
+        transform: translateY(50px);
+        opacity: 0;
+        }
+        100% {
+        transform: translateY(0);
+        opacity: 1;
+        }
+        }
+    
+        /*左邊快速選單YT*/ 
+
+        .fa{
+            color:#1D3E76;
+        }
+        .fa-youtube:hover{
+        color: red;
+        }
+    
+        /*左邊快速選單FB*/ 
+        .fa-facebook:hover{
+        color: blue;
+        }
+        
+        /*左邊快速選單E-mail*/ 
+        .fa-envelope:hover{
+        color: brown;
+        }
+    
+        /*圖片放大*/  
+        .picture:hover{
+        transform: scale(1.1);
+        transition: 3s;
+        }
+    
+        /*圖片放大*/  
+        .picturem:hover{
+        transform: scale(1.2);
+        transition: 3s;
+        }
+    
+        /*計畫主題一二三區塊樣式*/  
+        .modal,.modal1,.modal2{
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        padding-top: 100px; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto;
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+        z-index: 999;
+        }
+    
+        /*計畫主題一二三區塊樣式*/
+        .modal-content,.modal-content1,.modal-content2 {
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        border-radius: 20px;
+        background-color: #A9D4E4;
+        z-index: 999;
+        }
+    
+        /*計畫主題一二三XX選項區塊樣式*/
+        .close,.close1,.close2 {
+        color: #cc0404;
+        float: right;
+        font-size: 50px;
+        font-weight: bold;
+        }
+        
+        /*計畫主題一二三XX選項區塊樣式*/
+        .close:hover,
+        .close:focus,
+        .close1:hover,
+        .close1:focus,
+        .close2:hover,
+        .close2:focus{
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        }
+
+        /*banner樣式定位*/  
+        #banner .banner-content ul{
+        height: 900px;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        }
+        
+        /*banner島鏈人文叢書定位*/  
+        #banner .banner-content ul>li:nth-of-type(1) {
+        width: 20%;
+        position: absolute;
+        top: 9%;
+        right: unset;
+        bottom: unset;
+        left: 0;
+        z-index: 0;
+        }
+
+        /*banner按鈕*/  
+        .btn1{
+        width: fit-content;
+        top: 0;
+        border-radius: 30px;
+        padding: 4px 20px;
+        color: #fff;
+        background-color: #056C9F;
+        box-shadow: 0px 6px 0px #1D3E76;
+        color: white;
+        font-size: 18px;
+        font-weight:bold;
+        }
+
+        /*banner按鈕動畫*/  
+        .btn1:hover{
+        transform: scale(0.9);
+        transition: 0.8s;
+        }
+
+        /*banner圖片放大*/  
+        .bannerpicture:hover{
+        transform: scale(1.1);
+        transition: 3s;
+        }
+
+        /*banner船動畫*/ 
+        .bannerpictureship{
+        position: relative;
+        animation: shipmove 120s infinite;
+        }
+
+        @keyframes shipmove {
+        0%   {top: -50px;left: 600px;}
+        45%  {left: 150px;}
+        50%  {top:350px; }
+        55%  {left: 100px; }
+        100% {left: -150px; }
+        }
+
+        /*banner飛機動畫*/ 
+        .bannerpictureplane{
+        position: relative;
+        animation: planemove 20s infinite;
+       
+        }
+
+        @keyframes planemove {
+        0%   {top: 700px;left: 300px;}
+        25%  {top: 690px;left: 400px;}
+        50%  {transform: rotate(40deg);top: 680px;left: 480px;}
+        75%  {transform: rotate(175deg);top: 670px;left: 550px;}
+        100% {transform: rotate(210deg);top: 700px;left: 300px;}
+        }
+
+        /*banner車子動畫*/  
+        .bannerpicturecar{
+        position: relative;
+        animation: carmove 30s infinite;
+        
+       
+        }
+
+        @keyframes carmove {
+        0%   {top: 100px;left: 800px;}
+        25%  {top: 100px;left: 1000px;}
+        50%  {top: 100px;left: 1200px;}
+        75%  {top: 100px;left: 1400px;}
+        100% {top: 100px;left: 1600px;}
+        }
+
+        /*banner海豚動畫 
+        .bannerpicturedolphin{
+        position: relative;
+        animation: dolphinmove 20s infinite;
+        animation-timing-function: ease-out;
+        }
+
+       
+        @keyframes dolphinmove {
+        0%   {scale:0;top: 500px;left: 1000px;} 
+        13%  {scale:1.5;top: 430px;left: 1000px;}
+        20% {scale:0;transform: rotate(90deg);top: 490px;left: 1020px;}
+        100% {scale:0;transform: rotate(90deg);top: 490px;left: 1020px;}
+
+        }*/ 
+
+        /*banner火箭動畫*/  
+        .bannerpicturerocket{
+        position: relative;
+        animation: rocketmove 15s infinite;
+        animation-timing-function: ease-in-out;
+        }
+
+       
+        @keyframes rocketmove {
+        0%   {scale:0;top: 300px;left: 800px;} 
+        4% {scale:1;top: 300px;left: 800px;}
+        20% {scale:0.7;transform: rotate(40deg);top: -100px;left: 1000px;}
+        60% {scale:0.5;transform: rotate(120deg);top: -100px;left: 1000px;}
+        100% {scale:0.1;transform: rotate(180deg);top: -300px;left: 800px;}
+
+        }
+
+        
+        </style>
+              
+        <!--左側邊快速選單一-->
+        <div class="sidemenu">
+          <nav>
+            <ul>
+              <li><a href="#introduce" class="h5">計畫簡介</a></li>
+              <span>—</span>
+              <li><a href="#teammemberstyle" class="h5">團隊成員</a></li>
+              <span>—</span>
+              <li><a href="#event" class="h5">學術活動</a></li>
+              <span>—</span>
+              <!--Youtube一-->
+              <li><a href="https://www.youtube.com/channel/UCd9bSaJHfQ8grRSoteH9akQ" style="text-decoration: none;" class="h5"><i class="fa-brands fa-youtube" style="width: 20px;text-decoration: none;" ></i></li></a>
+              <span>—</span>
+              <!--Facebook一-->
+              <li><a href="https://www.facebook.com/profile.php?id=100071813840535" style="text-decoration: none;" class="h5"><i class="fa-brands fa-facebook" style="width: 20px;text-decoration: none;" ></i></li></a>
+              <span>—</span>
+              <!--E-mail一-->
+              <li><a href="mailto:nckutwchass@gmail.com"  target="_blank" style="text-decoration: none;" class="h5"> <i class="fa-solid fa-envelope" style="width: 20px;text-decoration: none;"></i></li></a>
+            </ul>
+          </nav>
+        </div>
+
+        <!--Banner區塊一-->
+        <section id="banner">
+          <div class="banner-content"style="max-width: 1600px;margin:auto;">
+            <ul style="list-style: none;">
+              <!--1島鏈人文叢書-->
+              <li>
+                <a href="https://chass.ncku.edu.tw/p/402-1011-1010.php?Lang=zh-tw" target="_blank">
+                <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/book-and-people-spring-svgrepo-com(1).svg"  class="bannerpicture reveal fade-right" style="width: 170px;margin: 0;position: absolute;right:9%;top:300%;transform:rotateY(180deg);z-index: 999;"> 
+                </a>
+              </li>
+               <!--2飛機&書按鈕-->
+               <li>
+                <a href="#event" >
+                <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/airplane-svgrepo-com.svg"  class="bannerpictureplane " style="width: 100px;margin: 0;position: absolute;left:40%;top:70%; z-index: 999">
+                <a href="https://chass.ncku.edu.tw/p/402-1011-1010.php?Lang=zh-tw" target="_blank">
+                <button class="btn1" style="position: absolute;left: 8%;top:22%;z-index: 999;" >島鏈人文叢書</button>
+                </a>
+               </a>           
+              </li>
+              <!--3島鏈人文大師講座-->
+              <li>
+                <a href="https://chass.ncku.edu.tw/p/402-1011-1007.php?Lang=zh-tw" target="_blank">
+                <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/554819633.png"  class="bannerpicture reveal fade-right" style="width: 250px;margin: 0;position: absolute;right:9%;top:10%;z-index: 999;">
+                </a>
+                <a href="https://chass.ncku.edu.tw/p/402-1011-1007.php?Lang=zh-tw" target="_blank">
+                <button class="btn1" style="position: absolute;right:13%;top:30%;z-index: 999;" >島鏈人文大師講座</button>
+              </a>
+              </li>
+              <!--4團隊成員-->
+              <li>
+                <a href="#teammemberstyle" >
+                <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/Artboards_Diversity_Avatars_by_Netguru(7).svg"  class="bannerpicture reveal fade-right" style="width: 150px;margin: 0;position: absolute;right:10%;top:40%;z-index: 999;">
+                </a>
+                <a href="#teammemberstyle" >
+                <button class="btn1" style="position: absolute;right:12%;top:52%;z-index: 999;" >團隊成員</button>
+              </a>
+              </li>
+              <!--5島鏈人文讀書會-->
+              <li>
+                <a href="https://chass.ncku.edu.tw/p/402-1011-1009.php?Lang=zh-tw" target="_blank">
+                <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/332578236.png"  class="bannerpicture reveal fade-right" style="width: 300px;margin: 0;position: absolute;right:12%;top:60%;z-index: 999;">
+                </a>
+                <a href="https://chass.ncku.edu.tw/p/402-1011-1009.php?Lang=zh-tw" target="_blank">
+                <button class="btn1" style="position: absolute;right:15%;top:78%;z-index: 999;" >島鏈人文讀書會</button>
+              </a>
+              </li>
+              <!--6船＆車子＆燈塔&火箭&海豚＆鯨魚-->
+              <li>
+                <a >
+                <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/ship-svgrepo-com.svg"  class="bannerpictureship" style="width: 110px;margin: 0;position: absolute;left:20%;top:40%;">
+                </a>
+                <a >
+                  <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/caravan-svgrepo-com.svg"  class="bannerpicturecar" style="width: 60px;margin: 0;position: absolute;right:40%;top:15%;">
+                </a>
+                <a >
+                  <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/lighthouse-svgrepo-com(1).svg"  class="bannerpicture" style="width: 210px;margin: 0;position: absolute;right:39%;top:73%;transform: rotateY(180deg);">
+                </a>
+<!--
+                <a >
+                  <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/dolphin-svgrepo-com.svg"  class="bannerpicturedolphin" style="width: 40px;margin: 0;position: absolute;right:53%;top:53%;">
+                </a>
+--!>
+                <a >
+                  <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/rocket-svgrepo-com.svg"  class="bannerpicturerocket" style="width: 60px;margin: 0;position: absolute;right:73%;top:43%;">
+                </a>
+                <a >
+                  <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/spouting-whale-svgrepo-com(1).svg"  class="bannerpicturewale" style="width: 60px;margin: 0;position: absolute;right:73%;top:43%;transform: rotateY(180deg);">
+                </a>
+                
+              </li>
+              <!--7島鏈人文密集課程-->
+              <li>
+                <a href="https://chass.ncku.edu.tw/p/402-1011-1008.php?Lang=zh-tw" target="_blank">
+                <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/012.png"  class="bannerpicture reveal fade-left" style="width: 320px;margin: 0;position: absolute;left:10%;top:55%;z-index: 99;">
+                </a>
+                <a href="https://chass.ncku.edu.tw/p/402-1011-1008.php?Lang=zh-tw" target="_blank">
+                <button class="btn1" style="position: absolute;left:15%;top:73%;z-index: 99;" >島鏈人文密集課程</button>
+              </a>
+              </li>
+              <!--8學術活動-->
+              <li>
+                <a >
+                <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/157639096.png"  class="bannerpicture reveal fade-right" style="width: 210px;margin: 0;position: absolute;right:50%;top:12%;z-index: 99;">
+                </a>
+                <a href="#event" >
+                <button class="btn1" style="position: absolute;left:38%;top:27%;z-index: 99;" >學術活動</button>
+              </a>
+              </li>
+              <!--9計畫-->
+              <li>
+                <a href="#introduce">
+                <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/school-svgrepo-com(1).svg"  class="bannerpicturevis reveal fade-bottom" style="width: 200px;margin: 0;position: absolute;right:40%;top:35%;z-index: 99;">
+                  </a>
+                <a href="#introduce">
+                <button class="btn1" style="position: absolute;left:45%;top:55%;z-index: 99;" >島鏈 X 思想</button>
+                </a>
+              </li>      
+            </ul>
+          </div>
+        </section>
+
+        <!--第一部分計畫簡介與三大主題 -->
+        <section id="introduce" style="margin-top: -50px;" >
+          <p style="text-align: justify;font-size: 18px;line-height: 40px;color: #2F3E45;">
+          <b class="headline">計畫簡介</b><br/>
+          成功大學人文社會科學中心致力發展「臺灣學」，關注臺灣多元發展，從歷史的縱橫，省思、探析臺灣在不同的歷史發展階段，因在地與世界於必然和偶然之間的碰觸，所產生的衝撞和交流，對於不同政權的交替、多元族群的衝突、遷徙與融合的跌宕，衍生出盤根錯節而多層重疊的族群關係、多元文化的色彩與國家認同上諸多紛擾且歧異的內在發展面向。「島鏈」具多重積極的學術作用與意義：一、串聯校內各大科系間的合作契機。二、鏈結臺綜大四校的合作與學術系統。三、擴充臺灣研究議題。四、拓展境外東亞及東南亞研究。誠如上述，「島鏈」脫胎於原有的政治策略意涵，轉而形構出積極的學術系統知識鏈，以跨校、跨域、跨國交流對話為共通命題。因此，第一年由國立成功大學主辦的島鏈人文策略聯盟計畫，以「島鏈・思想」為主題，「關懷在地人文」為切入點，藉由四校跨域的攜手合作，激盪出多元、跨域的視角，提升學術價值。<br/><br/>
+    
+          <div style="text-align: center;margin-top: -60px;justify-content: center;display: flex;"class="planall">
+            <!--計畫主題一-->
+            <div id="plan" style="border: none;background-color: none;"> <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/browser-svgrepo-com(1).svg" style="width: 350px; margin-right: 20px;" class="picturem  reveal fade-left"></div>
+              <div id="myModal" class="modal">
+              <div class="modal-content">
+              <span class="close">&times;</span>
+              <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/browser-svgrepo-com(1).svg" style="width: 350px; margin-right: 20px;" class="picturem  reveal fade-left">
+              <p style="font-size: 18px;line-height:40px;text-align: justify;padding:30px;">位處東亞海域中心、太平洋島鏈上的台灣,歷史上面對來自海洋的衝擊與挑戰,反思現階段的台海情勢。台灣是個海島,處於北連日本、南抵印尼的東亞(泛指東北亞與東南亞)海域的連接處,也位在構成太平洋西側島鏈的樞紐位置。當 16 世紀東海、南海貿易網絡貫通後,台灣海峽成了重要海上貿易通道,17 世紀初藉由荷蘭人之手,台灣成了東亞貿易據點,進入世界貿易舞台。自此台灣從原本大陸邊陲的「蠻荒」之島,一躍成為海洋貿易的最前線。但重要性躍升的同時,來自海洋的挑戰與衝擊卻也自此展開。17 世紀後期,原本與世界接軌的台灣被納入清王朝統治,台灣海峽成為內海,儘管對外接觸限縮,但活躍於東亞海域的海盜活動卻成為一大問題,對於清政府的台灣統治產生嚴重影響。</p>
+              </div>
+            </div>
+    
+            <!--計畫主題二-->
+            <div id="plan1" style="border: none;background-color: none;"> <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/browser-svgrepo-com(2).svg" style="width: 350px;margin-right: 20px; " class="picturem  reveal fade-bottom"></div>
+              <div id="myModal1" class="modal1">
+              <div class="modal-content">
+              <span class="close1">&times;</span>
+              <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/browser-svgrepo-com(2).svg" style="width: 350px;margin-right: 20px; " class="picturem  reveal fade-bottom">
+              <p style="font-size: 18px;line-height:40px;text-align: justify;padding:30px;">臺灣島彷如一隻敞洋於亞洲大陸西南邊緣、廣大的太平洋上的巨鯨,千萬年來孕育了無數生命,千百年來更吸納來自各地不同人群棲身、避難、重生和定居之所。不同時代的人群穿梭往來於不同的海洋、山川和原野之間,從不依靠文字的人群文化,到以文字作為交流對話符碼的人群文化,交織成多元文化路徑的經緯線;從島外到島內,時而衝突對立,濁浪滔天,時而對話互市,山海匯流。人群有東有西,送往迎來,人流南來北往,上山下海,串流人間世,鏈結島嶼間。有文留學,無文留話,話語有分東西,文學無分內外,輝映美麗島。</p>
+              </div>
+            </div>
+    
+            <!--計畫主題三-->
+            <div id="plan2" style="border: none;background-color: none;"><img src="https://chass.ncku.edu.tw/var/file/11/1011/img/browser-svgrepo-com(3).svg" style="width: 350px;" class="picturem reveal fade-right"></div>
+              <div id="myModal2" class="modal2">
+              <div class="modal-content2">
+              <span class="close2">&times;</span>
+              <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/browser-svgrepo-com(3).svg" style="width: 350px;" class="picturem reveal fade-right">
+              <p style="font-size: 18px;line-height:40px;text-align: justify;padding:30px;">追溯至六千年前南島語族(Austronesian)祖先們在遷徙流動的足跡中,運用大自然海洋所串連著島嶼間的特有性,形成了族群、島嶼與環境相互共生關係的知識網絡。台灣原住民族亦隸屬於南島語族,其生活方式包括農耕、狩獵、漁撈和採集等活動,數千年來發展出因地制宜的生活方式、傳統信仰、藝術和生態知識,呈現各族群獨特的知識觀、價值觀與背後的族群知識架構。原住民族的傳統生態知識(TEK, Traditional Ecological Knowledge)是在一種持續性交織形成中所發展的最適策略,包括狩獵和漁撈知識,涵蓋多重面向,反映了族人與環境資源互動的實踐。以當代倡議行動所推動的恢復狩獵和漁撈為例,並非一種全面恢復傳統生活的提倡,而是一種通過實踐學習傳統知識精華,結合現代生活需求和環境永續利用概念,構建源自傳統與現代思維的共融觀點。此生態知識不僅在原住民族社會,亦是島嶼住民的重要啟示,豐富植物醫學、土地管理和永續發展之面向,無論是面對氣候變遷、災難調適與預防等,提供當代社會多元的參考方案和解決問題之能力,且豐富現代人們的知識和價值觀。例如蘭嶼達悟族人的飛魚文化體現了族人對於周遭生態系統的深刻認知和管理技術;鄒族學者與文化實踐者浦忠勇最近出版的植物專書,以採集部落差異與不同論點,分析植物、名稱、詮釋與運用,以鄒族主體性思維存續傳統知識和化和生態環境。</p> 
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        <!--圖片-->
+        <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/012.png" style="width: 300px; float: right;margin-top: -180px;" class="picture reveal fade-right"><img src="https://chass.ncku.edu.tw/var/file/11/1011/img/tree-svgrepo-com(1).svg" style="width: 250px;float: left;margin-top:-210px;" class="picture reveal fade-left ">
+    
+        <!--第二部分團隊成員-->
+        <section id="teammemberstyle" style="margin-top: -50px;" >
+            <b class="headline">團隊成員</b><br/>
+            <div class="allwrap active reveal fade-left">
+              <ul class="teammemberstyle">
+                <li>
+                  <a href="https://www.econ.ncku.edu.tw/faculty_detail.asp?ID=90" target="_blank">
+                  <div class="member">
+                  <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/Artboards_Diversity_Avatars_by_Netguru(7).svg"  class="port"><br/>
+                  計畫主持人<br/>
+                  ———<br/>
+                  蔡群立<br/>
+                  TEL：06-2757575#56051<br/>
+                  E-mail：tchunli@ncku.edu.tw <br/>
+                  </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://pehl.ncku.edu.tw/p/412-1136-21994.php?Lang=zh-tw" target="_blank">
+                  <div class="member">
+                  <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/Artboards_Diversity_Avatars_by_Netguru(5).svg"  class="port"><br/>
+                  共同主持人<br/>
+                  ———<br/>
+                  徐珊惠<br/>
+                  TEL：06-2757575#56055<br/>
+                  E-mail：tiffhsu@gs.ncku.edu.tw<br/>
+                  </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://his.ncku.edu.tw/p/412-1190-25944.php?Lang=zh-tw" target="_blank">
+                  <div class="member">
+                  <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/Artboards_Diversity_Avatars_by_Netguru(4).svg" class="port"><br/>
+                  共同主持人<br/>
+                  ———<br/>
+                  李啟彰<br/>
+                  TEL：06-2757575#52324<br/>
+                  E-mail：leechichang1911@yahoo.com.tw <br/>
+                  </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://his.ncku.edu.tw/p/412-1190-25944.php?Lang=zh-tw" target="_blank">
+                  <div class="member">
+                  <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/Artboards_Diversity_Avatars_by_Netguru(8).svg"  class="port"><br/>
+                  共同主持人<br/>
+                  ———<br/>
+                  陳文松<br/>
+                  TEL：06-2757575#52338<br/>
+                  E-mail：z9902016@email.ncku.edu.tw<br/>
+                  </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://earth.ncku.edu.tw/p/412-1134-25846.php?Lang=zh-tw" target="_blank">
+                  <div class="member">
+                  <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/Artboards_Diversity_Avatars_by_Netguru(10).svg"  class="port"><br/>
+                  共同主持人<br/>
+                  ———<br/>
+                  樂鍇 祿璞崚岸<br/>
+                  TEL：06-2757575# 65436<br/>
+                  E-mail：Ljegay1111@gmail.com <br/>
+                  </div>
+                  </a>
+                </li>
+
+                <li>
+                 
+                  <div class="member">
+                  <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/Artboards_Diversity_Avatars_by_Netguru(2).svg"  class="port"><br/>
+                  博士後研究員<br/>
+                  ———<br/>
+                  林明發<br/>
+                  TEL：06-2757575#56071<br/>
+                  E-mail：11010076@gs.ncku.edu.tw<br/>
+                  </div>
+                </li>
+                <li>
+                  <div class="member">
+                  <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/Artboards_Diversity_Avatars_by_Netguru(9).svg"  class="port"><br/>
+                  人社中心行政人員<br/>
+                  ———<br/>
+                  朱怡婷<br/>
+                  TEL：06-2757575#56055<br/>
+                  <br/>
+                  </div>
+                </li>
+                <li>
+                  <div class="member">
+                  <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/avatar-svgrepo-com(4).svg"  class="port"><br/>
+                  兼任助理<br/>
+                  ———<br/>
+                  待聘<br/>
+                  TEL：06-2757575#56055<br/>
+                  <br/>
+                  </div>
+                </li>
+              </ul>
+          </div>  
+        </section>
+    
+        <!--圖片-->
+        <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/554819633.png" style="width: 250px; float: right;margin-top: -140px;" class="picture reveal fade-right"><img src="https://chass.ncku.edu.tw/var/file/11/1011/img/854295852.png" style="width: 250px;float: left;margin-top: -150px;" class="picture reveal fade-left">
+    
+        <!--第三部分學術活動-->
+        <section id="event" style="margin-top: -65px;">
+        <b class="headline">學術活動</b><br/>
+          <div class="allwrap active reveal fade-bottom">
+            <ul class="AcademicActivityStyle">
+              <li>
+                <a href="https://chass.ncku.edu.tw/p/402-1011-1007.php?Lang=zh-tw">
+                <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/747772772.svg" class="ac">
+                </a>
+              </li>
+              <li>
+                <a href="https://chass.ncku.edu.tw/p/402-1011-1009.php?Lang=zh-tw">
+                <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/489683622.svg" class="ac">
+                </a>
+              </li>
+              <li>
+                <a href="https://chass.ncku.edu.tw/p/402-1011-1008.php?Lang=zh-tw">
+                <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/277679562.svg" class="ac">
+                </a>
+              </li>                       
+              <li>
+                <a href="https://chass.ncku.edu.tw/p/402-1011-1010.php?Lang=zh-tw">
+                <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/732246217.svg" class="ac">
+                </a>
+              </li>                  
+            </ul>
+          </div>
+        </section>
+    
+        <!--圖片-->
+       <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/157639096.png" style="width: 250px;float: left;margin-top: -110px;" class="picture reveal fade-left">
+         <!--回頂端按鈕-->
+        <a href="#banner">
+        <button class="btn1 active reveal fade-right" style="float: right;margin-right:70px";>回頂端</button>
+        </a>
+            
+
+
+        
+        <!--javascript-->
+        <script>
+    
+        //浮動動畫//
+        function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+    
+        for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 10;
+    
+        if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+        } else {
+        reveals[i].classList.remove("active");
+        }
+        }
+        }
+      
+        window.addEventListener("scroll", reveal);
+        </script>
+
+       
+        <script>
+        //計畫主題一modal// 
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("plan");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+        modal.style.display = "block";
+        }
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+        if (event.target == modal) {
+        modal.style.display = "none";
+        }
+        }
+        </script>
+    
+        <script>
+        //計畫主題二modal//    
+        var modal1 = document.getElementById("myModal1");
+        var btn1 = document.getElementById("plan1");
+        var span = document.getElementsByClassName("close1")[0];
+        btn1.onclick = function() {
+        modal1.style.display = "block";
+        } 
+        span.onclick = function() {
+        modal1.style.display = "none";
+        }
+    
+        window.onclick = function(event) {
+        if (event.target == modal1) {
+        modal1.style.display = "none";
+        }
+        }
+        </script>
+    
+        <script>
+        //計畫主題三modal//    
+        var modal2 = document.getElementById("myModal2");
+        var btn2 = document.getElementById("plan2"); 
+        var span = document.getElementsByClassName("close2")[0];  
+        btn2.onclick = function() {
+        modal2.style.display = "block";
+        }
+    
+        span.onclick = function() {
+        modal2.style.display = "none";
+        }
+        window.onclick = function(event) {
+        if (event.target == modal2) {
+        modal2.style.display = "none";
+        }
+        }
+        </script>
+</body>
+</html>
