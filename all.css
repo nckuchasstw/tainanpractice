@@ -277,6 +277,10 @@
             .bi-facebook:hover{
                 color:royalblue
             }
+            .navbar-toggler{
+            background-color: #b29363;
+            border: 1px white solid;
+        }
     
             
 
