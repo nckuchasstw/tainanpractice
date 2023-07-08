@@ -128,13 +128,14 @@ h3{
 
         #banner{
         background-image: url(banner-01.svg);
+        background-color:#163D50; 
         background-repeat: no-repeat;
         background-position:center top;
         margin: 0;
         padding:0;
         border:0;
         background-size: cover;
-        
+
         }
 
 
