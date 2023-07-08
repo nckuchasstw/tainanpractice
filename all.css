@@ -127,7 +127,7 @@ h3{
     }
 
         #banner{
-        background-image: url(/image/banner-01.svg);
+        background-image: url(banner-01.svg);
         background-repeat: no-repeat;
         background-position:center top;
         margin: 0;
