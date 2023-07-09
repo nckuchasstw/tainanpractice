@@ -77,58 +77,57 @@
           <a class="navbar-brand px-4 d-lg-none" href="index.html">
               <img src="logo-01.svg" alt="Logo" width="auto" height="50" class="logo1 d-inline-block align-text-top ">
             </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto" >
-           
           
-            <li class="nav-item px-3">
-              <a class="nav-link" href="activity.html">相關活動</a>
-            </li>
-           
             <a class="navbar-brand px-5 d-none d-lg-block " href="index.html">
               <img src="logo-01.svg" alt="Logo" width="auto" height="70" class="d-inline-block align-text-top ">
             </a>
-            
-            
-            <li class="nav-item px-3">
-              <a class="nav-link" href="index.html">回首頁</a>
-            </li>
+           
           </ul>
         </div>
       </div>
   </nav>
 
+  
 
-<section class="activitysearch py-5">
-  <div id="app">
-    <h1 style="text-align: center;margin-top:0px;">文章搜尋</h1>
-     <div class="search-wrapper">
-       <input type="text" v-model="search" placeholder="請輸入演講者、類型、專題演講、音樂會等"/>
-     </div>
-     <p style="text-align:center;">共有{{filteredList.length}}筆相關資料</p>
-    <div class="container"  data-aos="fade-up"
-    data-aos-duration="2000" >
-      <div class="row row-cols-1 row-cols-md-4 g-4">
-          <div class="col" v-for="i in filteredList">
-            <div class="card h-100 " >
-              <a :href="i.url" target="_blank">
-              <img :src="i.img"/ class="pictureimg" style="width: 100%;" >
-            </a>
-              <div class="card-body">
-                <strong><p style="font-size: 16px;padding-top: 10px;color:#2F3E45;">{{ i.title }}</p></strong>
-                <p style="font-size:14px">演出者/講者：{{ i.author }}</p>
-                <p style="font-size:14px">活動日期：{{i.data}}</p>
-              </div>
-            </div>
+  <section style="padding: 40px 0 ;">
+    <div class="container text-center ">
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="activity.html" style="color:#163D50">相關活動</a></li>
+              <li class="breadcrumb-item active" aria-current="page">「一首歌，一個時代」音樂會</li>
+            </ol>
+          </nav>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col ">
+            <img src="https://chass.ncku.edu.tw/var/file/11/1011/img/897854735.svg" alt="" >
           </div>
+          <div class="col" >
+            <p style="line-height: 30px;letter-spacing: 2px;text-align: justify;">
+                <strong>【活動主旨】</strong><br/>
+                臺南及熱蘭遮城將於明年邁入建城 400 年紀念年，今年度我們期待透過「府看．府城」系列活動，探究在地歷史源流，揭示臺南獨特的文化魅力和深厚底蘊。今年度規劃的首場活動，我們期許發響臺南百年來的在地樂音，嘗試連結當今社會境況與過往時代風貌，並且藉由相關人文活動推廣，延續及發揚在地傳統文化，活絡校園中的文藝感知，擴大聽眾對社會的理解與視野。<br/>
+                文字與音樂始終是人民傳達感受的不二媒介，「臺灣學」計畫亦在辦理往年臺南國際人權藝術節時，致力於成為在地音樂推廣及文化轉譯平台。本次音樂會將透過東／西方樂器演奏，傳遞最具臺灣代表的時代音樂，讓大家可以更好地理解和欣賞不同文化之間的相似和不同之處，藉著銜接和對話，產生、再造更多元的意義與價值。本次邀請古意唸歌團和蔡明叡鋼琴家，詮釋自1890 年代至今，各個時期相關的台灣民謠歌曲。透過歌曲，觀眾能夠跨越時空，回到那既遠且近的某年，感受當時的矛盾和淒苦，進一步理解臺灣的文化背景和歷史發展脈絡。<br/>
+                <br/>
+                <strong>【活動資訊】</strong><br/>
+                主題︱「一首歌，一個時代」音樂會<br/>
+                時間︱112年4月19日（三）19:00<br/>
+                地點︱國立成功大學成杏廳<br/>
+                主辦單位︱國立成功大學人文社會科學中心<br/>
+                演出者︱古意唸歌團（台南傳統唸歌團）、 蔡明叡（鋼琴家）<br/>
+                <br/>
+                <strong>【演出者簡介】</strong><br/>
+                蔡明叡，鋼琴家，以獨奏和室內樂的形式舉辦多場令人感動激賞的音樂會，同時他也培育出多位優秀的年輕學子。在獲得漢堡音樂戲劇學院的鋼琴演奏碩士文憑後，於國立台灣師範大學音樂學系獲得音樂藝術博士學位（PhD）。期間曾受邀到台灣、香港、深圳、廣州、上海、杭州、廈門等地開設大師班。他的演奏以敏銳多變的音色、觸鍵，及深刻動人的詮釋受到讚賞，是一位理性與感性兼具的鋼琴家。<br/>
+                古意唸歌團，由臺南出身的羅士哲團長，與一群熱愛臺灣古調的「古意囡仔」組成，活躍於府城，自成軍以來致力推廣在地傳統音樂，藉著「歌仔車鼓太平歌」傳承臺灣百年記憶，以唸歌、陣頭與南管的樂音，重現古早味的府城。「唸歌」是臺灣的傳統說唱藝術，以月琴等傳統樂器和豐富多變的曲調搭配「歌仔」，傳唱豐富的在地題材，記述各時代、各階層臺灣人民的生活經驗。當中獨特的詞彙、語音和調式，更保存了臺灣歷經時代更迭的社會風貌，為臺灣珍貴的文化資產。<br/></p>
+               
           </div>
+        </div>
     </div>
-  </div>
-</div>
-</section>
+  </section>
+
+
+
   
 
   <section id="footer">
@@ -182,8 +181,10 @@ https://cdn.jsdelivr.net/npm/vue-loading-overlay@6.0.3/dist/index.min.js
 "></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js."></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="all.js"></script>
 <script src="vue.js"></script>
+<script src="gsap.js"></script>
 
 
   

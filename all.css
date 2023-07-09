@@ -17,13 +17,6 @@
     }
 
 
-   
-    
-
-   
-
-    
-
     body{
     font-family: 'Noto Serif TC', serif;
 
@@ -62,10 +55,11 @@
     }
 
     .navbar-active{
+       
 
     animation-fill-mode:both;
     animation-name: fadeInDown;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
 
 
     }
@@ -85,18 +79,11 @@
     
     }
 
-        #banner,#introduce,#activity,#video,#article{
+        #banner,#introduce,#activity,#video,#article,#url{
             padding-top: 140px;
             padding-bottom: 100px;
-
-
         }
 
-        #url{
-            padding-top: 140px;
-            padding-bottom: 140px;
-
-        }
 
         #article{
             background-color:#ffffff; 
@@ -254,12 +241,12 @@
                 font-size: 20px;
             }
 
-            .swiper-slide img{
+            .swiperimg{
                 max-width: 100%;
                 box-shadow: 8px 6px 7px #141414;
             }
 
-            .swiper-slide img:hover{
+            .swiperimg:hover{
                transform: scale(0.95);
                transition: 1s ;
             }
@@ -267,6 +254,8 @@
             .swiper-wrapper{
                 margin-bottom: 10px;
             }
+
+         
 
             .bi-youtube:hover{
                 color: red;
@@ -309,4 +298,6 @@
         }
 
 
+
+       
             
