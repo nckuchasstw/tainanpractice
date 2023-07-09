@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>府看府城</title>
+    <link rel="shortcut icon" href="logo-01.svg" type="image/x-icon" />
+    <link rel="icon" href="logo-01.svg" type="image/x-icon" />
+    <link rel="bookmark" href="logo-01.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+</head>
+<body>
+  <style>
+
+
+
+    
+  
+  
+
+    
+    input{
+      outline-style: none ;
+      border: 1px solid #ccc; 
+      background-color: rgb(235, 235, 235);
+     
+      padding: 13px 14px;
+      width: 300px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: "Microsoft soft";
+      border-radius: 30px;
+      margin: 10px;
+      
+    }
+  
+    input:hover{
+        border: 1px solid rgb(0, 0, 0); 
+        background-color: rgb(245, 255, 104);
+        
+    }
+  
+    
+    .search-wrapper{
+      text-align: center;
+    }
+  
+  
+    .pictureimg{
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px 10px 0px 0px;
+        
+    }
+  
+    .pictureimg:hover{
+      opacity: 0.8;
+    }
+    
+  
+  
+  </style>
+  
+
+  <nav class="navbar navbar-expand-lg  sticky-top" style="background-color: #163D50;">
+      <div class="container-fluid">
+          <a class="navbar-brand px-4 d-lg-none" href="index.html">
+              <img src="logo-01.svg" alt="Logo" width="auto" height="50" class="logo1 d-inline-block align-text-top ">
+            </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto" >
+            <li class="nav-item px-3" >
+              <a class="nav-link " aria-current="page" href="index.html">府看．府城</a>
+            </li>
+          
+            <li class="nav-item px-3">
+              <a class="nav-link" href="activity.html">相關活動</a>
+            </li>
+           
+            <a class="navbar-brand px-5 d-none d-lg-block " href="index.html">
+              <img src="logo-01.svg" alt="Logo" width="auto" height="70" class="d-inline-block align-text-top ">
+            </a>
+            <li class="nav-item px-3">
+              <a class="nav-link " href="paper.html">相關文章</a>
+            </li>
+            
+            <li class="nav-item px-3">
+              <a class="nav-link" href="index.html">回首頁</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+
+
+<section class="activitysearch py-5">
+  <div id="app">
+    <h1 style="text-align: center;margin-top:0px;">文章搜尋</h1>
+     <div class="search-wrapper">
+       <input type="text" v-model="search" placeholder="請輸入演講者、類型、專題演講、音樂會等"/>
+     </div>
+     <p style="text-align:center;">共有{{filteredList.length}}筆相關資料</p>
+    <div class="container"  data-aos="fade-up"
+    data-aos-duration="2000" >
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="col" v-for="i in filteredList">
+            <div class="card h-100 " >
+              <a :href="i.url" target="_blank">
+              <img :src="i.img"/ class="pictureimg" style="width: 100%;" >
+            </a>
+              <div class="card-body">
+                <strong><p style="font-size: 16px;padding-top: 10px;color:#2F3E45;">{{ i.title }}</p></strong>
+                <p style="font-size:14px">演出者/講者：{{ i.author }}</p>
+                <p style="font-size:14px">活動日期：{{i.data}}</p>
+              </div>
+            </div>
+          </div>
+          </div>
+    </div>
+  </div>
+</div>
+</section>
+  
+
+  <section id="footer">
+  <footer class="footer  py-5 " >
+    <ul class="list-unstyled" style="display: flex;    justify-content: center;" >
+      <li class="px-3 " >
+        <a href="">
+          <i class="bi bi-youtube  h2""></i></a>
+      </li>
+      <li class="px-3">
+        <a href="">
+          <i class="bi bi-instagram  h2 "></i></a>
+      </li>
+      <li class="px-3">
+        <a href="">
+          <i class="bi bi-spotify h2 "></i></a>
+      </li>
+      <li class="px-3">
+        <a href="">
+          <i class="bi bi-facebook h2 "></i></i></a>
+    `</li>
+  </li>
+  <li class="immg">
+  <a href="https://lin.ee/CSXZjzvm"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友" width="100" border="0"></a>
+  </li>
+      </ul>
+      
+      <p class="px-3" style="letter-spacing: 2px;line-height: 30px; text-align: center;color:white" >
+        
+      俯看府城<br/>
+      Tel：06-2757575 ext.56056<br/>
+      Fax:06-2088264<br/>
+      Email：nckutwchass@gmail.com<br/>
+      Add：70101 台南市東區大學路一號光復校區雲平大樓東棟北側5樓<br/>
+      
+      </p>
+
+     
+  </footer>
+</section>
+
+ 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.1/dist/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/vue-loading-overlay@6.0.3/dist/index.min.js
+"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js."></script>
+<script src="all.js"></script>
+<script src="vue.js"></script>
+
+
+  
+    
+</body>
+</html>
+
+
+  
+
+ 
+
+
+
+
+  
+ 
+
+   
+
+   
+      
+  
+  
+  
+  
